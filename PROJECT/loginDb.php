@@ -24,11 +24,12 @@
 				
 				$_SESSION['status'] = "OK";
 				setcookie('status', "OK", time() + 3600, '/');
-            	setcookie('id', $rowsCount['id'], time() + 3600, '/');
+				setcookie('id', $rowsCount['id'], time() + 3600, '/');
+				setcookie('email', $rowsCount['email'], time() + 3600, '/');
 				if($sqlExecution)
 				{
 					$_SESSION['loggedIn']='1';
-                    include('adminHome.php');
+					include('adminHome.php');
 				}	
 			}
 

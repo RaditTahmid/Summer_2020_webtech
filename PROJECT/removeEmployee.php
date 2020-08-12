@@ -12,7 +12,7 @@
             $mysqlConnection = mysqli_connect('127.0.0.1:3306', 'radit', 'radit123', 'webtech');
             $query = "delete from employees where id='$id' ";
             mysqli_query($mysqlConnection, $query);
-            header('location: employeeProfile.php');
+            header('location: employeeList.php');
         }
     }
     else

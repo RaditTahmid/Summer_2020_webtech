@@ -1,12 +1,18 @@
-
 <html>
-<head>
-<title>Login</title>
-</head>
-<body>
-
-       
-<table >					
+    <head>
+        <title>Login to ERPIMS</title>
+    </head>
+    <body>
+        <header style="background-color: royalblue; width: 100%; height: 52px;">
+            
+            <nav align="right">
+                <img align="left" src="images/erpims.JPG" />
+                <br /> 
+                <a style="text-decoration-line: inherit; color: white;" href="homepage.html">Home</a>
+            </nav>
+        </header>
+        <br />
+        <table >					
 	<tr >
         <td >
 			<fieldset>
@@ -30,8 +36,5 @@
 					</td>
 					</tr>
 </table>		
-</body>
+    </body>
 </html>
-
-
-

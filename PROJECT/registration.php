@@ -1,10 +1,19 @@
 <html>
-<head>
-<title>Registration</title>
-</head>
-<body>
-
-<table  >
+    <head>
+        <title>Registration</title>
+    </head>
+    <body>
+        <header style="background-color: royalblue; width: 100%; height: 52px;">
+            
+            <nav align="right">
+                <img align="left" src="images/erpims.JPG" />
+                <br /> 
+                <a style="text-decoration-line: inherit; color: white;" href="homepage.html">Home</a>
+            </nav>
+        </header>
+        <br />
+        
+        <table  >
 					
     <td >
 		<fieldset >
@@ -61,8 +70,6 @@
 		</td>
 		</tr>
                     
-</table>		
-		    
-
-</body>
+</table>
+    </body>
 </html>

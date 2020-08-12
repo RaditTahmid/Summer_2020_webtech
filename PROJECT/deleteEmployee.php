@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Employee List</title>
+        <title>Remove Employee</title>
     </head>
     <body>
         <header style="background-color: royalblue; width: 100%; height: 52px;">
@@ -17,7 +17,9 @@
             $query = "select * from employees";
             $sqlExecution=mysqli_query($mysqlConnection,$query);               
         ?>
-        <table border="1">
+        <fieldset style="width: 27%;">
+            <legend>Employee List</legend>
+            <table border="1">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -41,5 +43,24 @@
                ?>               
             </tbody>
         </table>
+        </fieldset>
+        
+        <br/><br/>
+
+        <fieldset style="width: 20%;">
+            <legend>Remove Employee</legend>
+            <form action="removeEmployee.php" method="POST">
+                <table>
+                    <tr>
+                        <td>Employee Id</td>
+                        <td>
+                            <input type="text" name="id"/>
+                        </td>
+                    </tr>  
+                </table>
+                <hr/>
+                <input type="submit" name="submit" value="Submit"/>
+            </form>
+        </fieldset>
     </body>
 </html>
