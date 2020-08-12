@@ -14,7 +14,7 @@
 		}
 		else
 		{
-			$mysqlConnection = mysqli_connect('127.0.0.1:3306', 'radit', 'radit123', 'webtech');
+			$mysqlConnection = mysqli_connect('127.0.0.1', 'radit', 'radit123', 'webtech');
 			$query = "select * from users where id='$id' and password='$password' ";
 			$sqlExecution = mysqli_query($mysqlConnection, $query);
 			$rowsCount = mysqli_num_rows($sqlExecution);
