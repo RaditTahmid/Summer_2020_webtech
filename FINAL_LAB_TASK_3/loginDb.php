@@ -22,6 +22,8 @@
 			if($rowsCount == 1 )
 			{
 				$_SESSION['id'] = $id;
+				$_SESSION['name'] = $name;
+				$_SESSION['email'] = $email;
 				header('location: adminHome.php');
 			}
 
