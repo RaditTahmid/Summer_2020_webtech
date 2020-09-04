@@ -19,11 +19,11 @@
         
         if(mysqli_query($mysqlConnection, $query))
         {
-            echo "SUCCESSFULLY INSERTED DATA";
+            echo "SUCCESSFULLY REGISTERED";
 
         }
            else{
-            echo "ERROR INSERTED DATA";
+            echo "AN UNEXPECTED ERROR OCCURED !";
            }
         
         
