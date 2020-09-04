@@ -1,7 +1,5 @@
 <?php
 
-if(isset($_POST['register']))
-{
     $id = $_POST['id'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirmPassword'];
@@ -18,14 +16,19 @@ if(isset($_POST['register']))
         
         $mysqlConnection = mysqli_connect('127.0.0.1', 'radit', 'radit123', 'webtech');
         $query = "insert into users(id,password,confirmPassword,name,email) values('$id','$password','$confirmPassword','$name','$email')";
-        mysqli_query($mysqlConnection, $query);
+        
+        if(mysqli_query($mysqlConnection, $query))
+        {
+            echo "SUCCESSFULLY INSERTED DATA";
 
-        sleep(6);
+        }
+           else{
+            echo "ERROR INSERTED DATA";
+           }
+        
         
     }
 
-}
+    
 
-    $data = "Sucessfully registered !";
-    echo $data;
 ?>

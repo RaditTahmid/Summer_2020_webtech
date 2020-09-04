@@ -15,28 +15,28 @@
 					<tr>
 					<td>Id</td>
 										
-						<td><input name="id" type="text" ></td>
+						<td><input id="id" name="id" type="text" ></td>
 										
 							</tr>
 									
 							<tr>
 								<td>Password</td>
 										
-									<td><input name="password" type="password"></td>
+									<td><input id="password" name="password" type="password"></td>
 										
 									</tr>
 
 									<tr>
 										<td>Confirm Password</td>
 										
-										<td><input name="confirmPassword" type="password"></td>
+										<td><input id="confirmPassword" name="confirmPassword" type="password"></td>
 										
 									</tr>
 
 									<tr>
 										<td>Name</td>
 										
-										<td><input name="name" type="text"></td>
+										<td><input id="name" name="name" type="text"></td>
 										
 									</tr>
 
@@ -45,7 +45,7 @@
 										<td>Email</td>
 										
 										<td>
-											<input name="email" type="text">
+											<input id="email" name="email" type="text">
 											
 										</td>
 										
@@ -54,7 +54,7 @@
 									
 </table>
 								<hr />
-								<input type="submit" name="register" value="Submit" onclick="ajax()" > 
+								<input type="button" value="Submit" onclick="ajax()" > 
 								
 								
 				</form>
@@ -71,12 +71,15 @@
 <script type="text/javascript">
 		
 		function ajax(){
-
-var xhttp = new XMLHttpRequest();
-
-xhttp.open('POST', 'registration.php', true);
-xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-xhttp.send(null);
+			var id = document.getElementById('id').value;
+			var password = document.getElementById('password').value;
+			var confirmPassword = document.getElementById('confirmPassword').value;
+			var name = document.getElementById('name').value;
+			var email = document.getElementById('email').value;
+			var xhttp = new XMLHttpRequest();
+			xhttp.open('POST', 'registration.php', true);
+			xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+			xhttp.send('id='+id+'&password='+password+'&confirmPassword='+confirmPassword+'&name='+name+'&email='+email);
 
 xhttp.onreadystatechange = function(){
 	if(this.readyState == 4 && this.status == 200){
