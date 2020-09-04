@@ -20,15 +20,13 @@
         if(mysqli_query($mysqlConnection, $query))
         {
             echo "SUCCESSFULLY REGISTERED";
-
         }
-           else{
+
+        else
+        {
             echo "AN UNEXPECTED ERROR OCCURED !";
-           }
-        
-        
+        }
+
     }
-
     
-
 ?>
