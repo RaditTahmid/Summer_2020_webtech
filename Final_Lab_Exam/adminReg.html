@@ -50,11 +50,11 @@
                type: "POST",
                url: "adminReg.php",
                data: dataString,
-               success: function(f){
-                 alert("SUCCESSFULLY REGISTERED !");
+               success: function(){
+                 alert("SUCCESSFULLY REGISTERED EMPLOYER");
                },
-               Error: function(f) {
-                   alert("AN UNEXPECTED ERROR OCCURED !");
+               Error: function() {
+                   alert("AN UNEXPECTED ERROR OCCURED REGISTERING EMPLOYER !");
                }
            });
        }); 

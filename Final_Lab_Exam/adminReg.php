@@ -16,16 +16,16 @@
         
         $mysqlConnection = mysqli_connect('127.0.0.1', 'radit', 'radit123', 'webtech');
         $query = "Insert into admin Values('$employerName','$companyName','$contactNo','$userName','$password')";
-        
-        if(mysqli_query($mysqlConnection, $query))
-        {
-            echo "SUCCESSFULLY REGISTERED EMPLOYER";
-        }
+        mysqli_query($mysqlConnection, $query);
+        // if(mysqli_query($mysqlConnection, $query))
+        // {
+        //     echo "SUCCESSFULLY REGISTERED EMPLOYER";
+        // }
 
-        else
-        {
-            echo "AN UNEXPECTED ERROR OCCURED REGISTERING EMPLOYER !";
-        }
+        // else
+        // {
+        //     echo "AN UNEXPECTED ERROR OCCURED REGISTERING EMPLOYER !";
+        // }
 
     }
     
